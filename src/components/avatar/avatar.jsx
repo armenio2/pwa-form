@@ -3,24 +3,30 @@ import { Link } from "react-router-dom";
 
 import Head from '../head/head';
 
-const IsJedi = () => {
+const Avatar = () => {
     return (
         <div style={containerStyle} className="container-fluid">
             <Head title='Registrar' />
             <div className="row  align-self-center">
                 <div className="col-md-6 offset-md-3">
-                    <span>The Force Side</span>
+                    <span>Escolha seu Avatar</span>
                 </div>
             </div>
             <div style={rowStyle} className="row  align-self-center">
-                <div className="col-sm-7 offset-sm-7">
-                    <Link style={buttonStyle} to="/users/">JEDI</Link>
-                    <Link style={buttonStyle} to="/users/">SITH</Link>
+                <div className="col-md-6">
+                    <Link style={buttonStyle} to="/end/">opção1</Link>
                 </div>
-            </div>
-            <div style={rowStyle} className="row  align-self-center">
-                <div className="col-sm-7 offset-sm-7">
-                    <Link style={buttonStyle} to="/">Voltar</Link>
+                <div className="col-md-6">
+                    <Link style={buttonStyle} to="/end/">opção2</Link>
+                </div>
+                <div className="col-md-6">
+                    <Link style={buttonStyle} to="/end/">opção3</Link>
+                </div>
+                <div className="col-md-6">
+                    <Link style={buttonStyle} to="/end/">opção4</Link>
+                </div>
+                <div className="col-md-6">
+                    <Link style={buttonStyle} to="/isjedi/">Voltar</Link>
                 </div>
             </div>
         </div>
@@ -49,4 +55,4 @@ const rowStyle = {
     height: '10vh'
 }
 
-export default IsJedi;
+export default Avatar;

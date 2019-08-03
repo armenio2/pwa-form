@@ -3,36 +3,24 @@ import { Link } from "react-router-dom";
 
 import Head from '../head/head';
 
-const Gender = (props) => {
+const Result = () => {
     return (
         <div style={containerStyle} className="container-fluid">
-            <Head title={props.title} />
-            <div className="row align-self-center">
-                <div className="col-md-6 offset-md-3">
-                    <span>Nome</span>
-                </div>
-            </div>
-            <div style={rowStyle} className="row  align-self-center  ">
-                <div className="col-md-6 offset-md-3">
-                    <input type="email" className="form-control" id="exampleFormControlInput1" />
-                </div>
-            </div>
+            <Head title='Registrar' />
             <div className="row  align-self-center">
                 <div className="col-md-6 offset-md-3">
-                    <span>Gênero</span>
-                </div>
-            </div>
-            <div style={rowStyle} className="row  align-self-center">
-                <div className="col-md-6 offset-md-3">
-                    <select className="form-control" id="exampleFormControlSelect1">
-                        <option>Masculino</option>
-                        <option>Feminino</option>
-                    </select>
+                    <span>The Force Side</span>
                 </div>
             </div>
             <div style={rowStyle} className="row  align-self-center">
                 <div className="col-sm-7 offset-sm-7">
-                    <Link style={buttonStyle} to="/isjedi/">Continuar</Link>
+                    <Link style={buttonStyle} to="/users/">JEDI</Link>
+                    <Link style={buttonStyle} to="/users/">SITH</Link>
+                </div>
+            </div>
+            <div style={rowStyle} className="row  align-self-center">
+                <div className="col-sm-7 offset-sm-7">
+                    <Link style={buttonStyle} to="/">Voltar</Link>
                 </div>
             </div>
         </div>
@@ -61,4 +49,4 @@ const rowStyle = {
     height: '10vh'
 }
 
-export default Gender;
+export default Result;
