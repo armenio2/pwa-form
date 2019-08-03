@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from '../head/head';
 
 import useAxios from 'axios-hooks'
 
 const Result = (props) => {
     const [{ data, loading, error }, refetch] = useAxios(
-        'https://viacep.com.br/ws/01001000/json/'
+        'https://viacep.com.br/ws/89035402/json/'
     )
 
     return (
@@ -18,7 +18,7 @@ const Result = (props) => {
             </div>
             <div className="row">
                 <div className="col-12">
-                    <span>{data ? data.cep : ''}</span>
+                    <span>{data ? data.logradouro : ''}</span>
                 </div>
             </div>
         </div >
