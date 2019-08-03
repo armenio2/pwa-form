@@ -8,7 +8,7 @@ const Result = (props) => {
             <Head title={props.title} />
             <div className="row  align-self-center">
                 <div className="col-md-6 offset-md-3">
-                    <span>Parabens você escolheu o lado {props.dataSide || 'neutro'} da força!!! </span>
+                    <span>Parabens você escolheu o lado {props.side || 'Neutro'} da força!!! </span>
                 </div>
             </div>
         </div >
