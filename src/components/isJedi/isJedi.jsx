@@ -15,7 +15,7 @@ const IsJedi = (props) => {
 
     return (
         <div style={containerStyle} className="container-fluid">
-            <Head title='Registrar' />
+            <Head title={props.title} />
             <div className="row  align-self-center">
                 <div className="col-md-6 offset-md-3">
                     <span>The Force Side</span>

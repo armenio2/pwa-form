@@ -11,20 +11,19 @@ function App() {
   const [dataName, changeDataName] = useState();
   const [dataGender, changeDataGender] = useState();
   const [dataSide, changeDataSide] = useState();
+  const [dataAvatar, changeDataAvatar] = useState();
 
   const SignUp = () => {
     return <Gender title='Cadatrar' changeDataName={changeDataName} changeDataGender={changeDataGender} />
   }
   const ChoiseSide = () => {
-    return <IsJedi title='Lado da Força' changeDataSide={changeDataSide} />
+    return <IsJedi title={`${dataName || 'Desconhecido'} Escolha o lado da força!!!`} changeDataSide={changeDataSide} />
   }
   const ChoiseAvatar = () => {
-    const [avatar, changeAvatar] = useState();
-    return <Avatar title='Miniatura Personalizada' avatar={avatar} changeAvatar={changeAvatar} />
+    return <Avatar title='Miniatura Personalizada' changeDataAvatar={changeDataAvatar} />
   }
   const FinishSignUp = () => {
-    console.log("name ", dataName, 'genero ', dataGender, 'lado da força ', dataSide)
-    return <Result title='Finish' />
+    return <Result title={`Bem-vindo, ${dataName || 'Desconhecido'}!`}  name={dataName} gender={dataGender} side={dataSide} avatar={dataAvatar} />
   }
   return (
     <div className="App">
