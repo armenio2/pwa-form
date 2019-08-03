@@ -16,20 +16,24 @@ const IsJedi = (props) => {
     return (
         <div style={containerStyle} className="container-fluid">
             <Head title={props.title} />
-            <div className="row  align-self-center">
-                <div className="col-md-6 offset-md-3">
-                    <span>The Force Side</span>
+            <div className="container">
+                <div style={rowStyle} className="row align-itens-center">
+                    <div className="col-12">
+                        <span style={spanStyle}>The Force Side</span>
+                    </div>
                 </div>
-            </div>
-            <div style={rowStyle} className="row  align-self-center">
-                <div className="col-sm-7 offset-sm-7">
-                    <Link onClick={clickJediSide} style={buttonStyle} to="/users/">JEDI</Link>
-                    <Link onClick={clickDarkSide} style={buttonStyle} to="/users/">SITH</Link>
+                <div style={rowStyle} className="row justify-content-between">
+                    <div className="col-4">
+                        <Link onClick={clickJediSide} style={choiseButtonStyle} to="/users/">JEDI</Link>
+                    </div>
+                    <div className="col-4">
+                        <Link onClick={clickDarkSide} style={choiseButtonStyle} to="/users/">SITH</Link>
+                    </div>
                 </div>
-            </div>
-            <div style={rowStyle} className="row  align-self-center">
-                <div className="col-sm-7 offset-sm-7">
-                    <Link style={buttonStyle} to="/">Voltar</Link>
+                <div style={rowStyle} className="row align-self-center">
+                    <div className="col-sm-7">
+                        <Link style={buttonStyle} to="/">Voltar</Link>
+                    </div>
                 </div>
             </div>
         </div>
@@ -42,6 +46,7 @@ const IsJedi = (props) => {
 const containerStyle = {
     height: '80vh',
     padding: 0,
+    textAlign: 'center'
 }
 
 const buttonStyle = {
@@ -54,8 +59,23 @@ const buttonStyle = {
     boxShadow: '5px 5px',
 }
 
+const choiseButtonStyle = {
+    color: 'white',
+    backgroundColor: 'black',
+    fontWeight: 'bold',
+    padding: '35px',
+    marginTop: 25,
+    border: '2px grey solid',
+    boxShadow: '5px 5px',
+}
+
 const rowStyle = {
-    height: '10vh'
+    height: '12vh'
+}
+
+const spanStyle = {
+    fontWeight: 'bold',
+    fontSize: 25,
 }
 
 export default IsJedi;

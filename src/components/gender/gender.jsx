@@ -23,33 +23,30 @@ const Gender = (props) => {
     };
 
     return (
-        <div style={containerStyle} className="container-fluid">
+        <div style={containerStyle} className="container-fluid ">
             <Head title={props.title} />
-            <div className="row align-self-center">
-                <div className="col-md-6 offset-md-3">
+            <div className="container-fluid ">
+            <div style={rowStyle} className="row align-self-center">
+                <div className="col-md-6 offset-md-3 col-sm-6">
                     <span>Nome</span>
                 </div>
-            </div>
-            <div style={rowStyle} className="row  align-self-center  ">
-                <div className="col-md-6 offset-md-3">
+                <div className="col-md-6 offset-md-3 col-sm-6">
                     <input type="text" className="form-control" id="exampleFormControlInput1"
                         value={name}
                         onChange={e => changeName(e.target.value)}
-                    />
-                </div>
-            </div>
-            <div className="row  align-self-center">
-                <div className="col-md-6 offset-md-3">
-                    <span>Gênero</span>
+                        />
                 </div>
             </div>
             <div style={rowStyle} className="row  align-self-center">
-                <div className="col-md-6 offset-md-3">
+                <div className="col-md-6 offset-md-3 col-sm-6">
+                    <span>Gênero</span>
+                </div>
+                <div className="col-md-6 offset-md-3 col-sm-6">
                     <Select
                         value={gender}
                         onChange={handleChange}
                         options={options}
-                    />
+                        />
                 </div>
             </div>
             <div style={rowStyle} className="row  align-self-center">
@@ -57,6 +54,7 @@ const Gender = (props) => {
                     <Link onClick={clickHander} style={buttonStyle} to="/isjedi/">Continuar</Link>
                 </div>
             </div>
+                        </div>
         </div>
 
 
@@ -80,7 +78,8 @@ const buttonStyle = {
 }
 
 const rowStyle = {
-    height: '10vh'
+    height: '10vh',
+    marginTop: 25
 }
 
 export default Gender;
