@@ -20,7 +20,7 @@ function App() {
     return <IsJedi title={`${dataName || 'Desconhecido'} Escolha o lado da força!!!`} changeDataSide={changeDataSide} />
   }
   const ChoiseAvatar = () => {
-    return <Avatar title='Miniatura Personalizada' changeDataAvatar={changeDataAvatar} />
+    return <Avatar title='Miniatura Personalizada' changeDataAvatar={changeDataAvatar} dataGender={dataGender} />
   }
   const FinishSignUp = () => {
     return <Result title={`Bem-vindo, ${dataName || 'Desconhecido'}!`} name={dataName} gender={dataGender} side={dataSide} avatar={dataAvatar} />

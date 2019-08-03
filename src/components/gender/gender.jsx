@@ -15,7 +15,7 @@ const Gender = (props) => {
     const [gender, changeGender] = useState();
     const clickHander = () => {
         props.changeDataName(name || 'Desconhecido')
-        props.changeDataGender(gender ? gender.value : 'Sem genero definido')
+        props.changeDataGender(gender ? gender.label : 'Sem genero definido')
     }
 
     const handleChange = gender => {
