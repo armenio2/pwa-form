@@ -13,13 +13,15 @@ const Avatar = (props) => {
                     <span>Escolha seu Avatar</span>
                 </div>
             </div>
-            <div className="row justify-content-around">
-                <div className="col">
+            <div style={rowStyle} className="row justify-content-around">
+                <div className="col-6">
                     <Link onClick={() => props.changeDataAvatar('1')} style={buttonStyle} to="/end/">opção1</Link>
                 </div>
-                <div className="col">
+                <div className="col-6">
                     <Link onClick={() => props.changeDataAvatar('2')} style={buttonStyle} to="/end/">opção2</Link>
                 </div>
+            </div>
+            <div style={rowStyle} className="row justify-content-around">
                 <div className="col">
                     <Link onClick={() => props.changeDataAvatar('3')} style={buttonStyle} to="/end/">opção3</Link>
                 </div>
@@ -40,7 +42,6 @@ const Avatar = (props) => {
 }
 
 const containerStyle = {
-    height: '80vh',
     padding: 0,
 }
 
