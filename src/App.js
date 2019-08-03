@@ -10,19 +10,20 @@ function App() {
 
   const [dataName, changeDataName] = useState();
   const [dataGender, changeDataGender] = useState();
+  const [dataSide, changeDataSide] = useState();
+
   const SignUp = () => {
     return <Gender title='Cadatrar' changeDataName={changeDataName} changeDataGender={changeDataGender} />
   }
   const ChoiseSide = () => {
-    const [side, changeSide] = useState();
-    return <IsJedi title='Lado da Força' side={side} changeSide={changeSide} />
+    return <IsJedi title='Lado da Força' changeDataSide={changeDataSide} />
   }
   const ChoiseAvatar = () => {
     const [avatar, changeAvatar] = useState();
     return <Avatar title='Miniatura Personalizada' avatar={avatar} changeAvatar={changeAvatar} />
   }
   const FinishSignUp = () => {
-    console.log("name ", dataName, dataGender)
+    console.log("name ", dataName, 'genero ', dataGender, 'lado da força ', dataSide)
     return <Result title='Finish' />
   }
   return (

@@ -3,7 +3,16 @@ import { Link } from "react-router-dom";
 
 import Head from '../head/head';
 
-const IsJedi = () => {
+const IsJedi = (props) => {
+
+    const clickJediSide = () => {
+        props.changeDataSide('Jedi');
+    }
+
+    const clickDarkSide = () => {
+        props.changeDataSide('Sith');
+    }
+
     return (
         <div style={containerStyle} className="container-fluid">
             <Head title='Registrar' />
@@ -14,8 +23,8 @@ const IsJedi = () => {
             </div>
             <div style={rowStyle} className="row  align-self-center">
                 <div className="col-sm-7 offset-sm-7">
-                    <Link style={buttonStyle} to="/users/">JEDI</Link>
-                    <Link style={buttonStyle} to="/users/">SITH</Link>
+                    <Link onClick={clickJediSide} style={buttonStyle} to="/users/">JEDI</Link>
+                    <Link onClick={clickDarkSide} style={buttonStyle} to="/users/">SITH</Link>
                 </div>
             </div>
             <div style={rowStyle} className="row  align-self-center">

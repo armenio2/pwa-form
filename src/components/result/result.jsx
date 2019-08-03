@@ -14,13 +14,12 @@ const Result = () => {
             </div>
             <div style={rowStyle} className="row  align-self-center">
                 <div className="col-sm-7 offset-sm-7">
-                    <Link style={buttonStyle} to="/users/">JEDI</Link>
-                    <Link style={buttonStyle} to="/users/">SITH</Link>
+
                 </div>
             </div>
             <div style={rowStyle} className="row  align-self-center">
                 <div className="col-sm-7 offset-sm-7">
-                    <Link style={buttonStyle} to="/">Voltar</Link>
+
                 </div>
             </div>
         </div>
