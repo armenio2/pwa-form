@@ -1,8 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
+import Gender from './components/gender/gender';
+
 function Index() {
-  return <h2>Genero</h2>;
+  return <Gender />;
 }
 
 function About() {
@@ -18,11 +20,7 @@ function App() {
     <div className="App">
       <Router>
         <div>
-          <nav>
-            <Link to="/">Home</Link>
-            <Link to="/about/">About</Link>
-            <Link to="/users/">Users</Link>
-          </nav>
+
 
           <Route path="/" exact component={Index} />
           <Route path="/about/" component={About} />
@@ -32,5 +30,13 @@ function App() {
     </div>
   );
 }
+
+/*
+      <nav>
+            <Link to="/">Home</Link>
+            <Link to="/about/">About</Link>
+            <Link to="/users/">Users</Link>
+          </nav>
+*/
 
 export default App;
