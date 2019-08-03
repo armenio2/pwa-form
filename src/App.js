@@ -23,7 +23,6 @@ function App() {
     return <Avatar title='Miniatura Personalizada' changeDataAvatar={changeDataAvatar} />
   }
   const FinishSignUp = () => {
-    console.log("side ", dataSide)
     return <Result title={`Bem-vindo, ${dataName || 'Desconhecido'}!`} name={dataName} gender={dataGender} side={dataSide} avatar={dataAvatar} />
   }
   return (
