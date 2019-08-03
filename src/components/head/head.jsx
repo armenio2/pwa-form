@@ -2,9 +2,9 @@ import React from 'react';
 
 const Header = (props) => {
     return (
-        <div style={containerStyle} class="container-fluid">
-            <div class="row">
-                <div class="col">
+        <div style={containerStyle} className="container-fluid">
+            <div className="row">
+                <div className="col">
                     <span>{props.title}</span>
                 </div>
             </div>
