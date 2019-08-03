@@ -14,7 +14,7 @@ function App() {
   const [dataAvatar, changeDataAvatar] = useState();
 
   const SignUp = () => {
-    return <Gender title='Cadatrar' changeDataName={changeDataName} changeDataGender={changeDataGender} />
+    return <Gender title='Cadastrar' changeDataName={changeDataName} changeDataGender={changeDataGender} />
   }
   const ChoiseSide = () => {
     return <IsJedi title={`${dataName || 'Desconhecido'} Escolha o lado da força!!!`} changeDataSide={changeDataSide} />
