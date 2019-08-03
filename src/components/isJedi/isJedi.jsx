@@ -37,9 +37,6 @@ const IsJedi = (props) => {
                 </div>
             </div>
         </div>
-
-
-
     );
 }
 
@@ -56,17 +53,17 @@ const buttonStyle = {
     padding: '15px',
     marginTop: 25,
     border: '1px black solid',
-    boxShadow: '5px 5px',
+    boxShadow: '1px 1px',
 }
 
 const choiseButtonStyle = {
     color: 'white',
-    backgroundColor: 'black',
     fontWeight: 'bold',
+    backgroundColor: 'black',
     padding: '35px',
     marginTop: 25,
     border: '2px grey solid',
-    boxShadow: '5px 5px',
+    boxShadow: '1px 1px black',
 }
 
 const rowStyle = {
