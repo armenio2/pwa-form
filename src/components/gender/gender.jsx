@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import Select from 'react-select';
 
 import Head from '../head/head';
 
 const Gender = (props) => {
+
+    const [name, changeName] = useState();
+    const [gender, changeGender] = useState();
+    const clickHander = () => {
+        props.changeDataName(name)
+        props.changeDataGender(gender)
+    }
+
     return (
         <div style={containerStyle} className="container-fluid">
             <Head title={props.title} />
@@ -14,7 +23,10 @@ const Gender = (props) => {
             </div>
             <div style={rowStyle} className="row  align-self-center  ">
                 <div className="col-md-6 offset-md-3">
-                    <input type="email" className="form-control" id="exampleFormControlInput1" />
+                    <input type="text" className="form-control" id="exampleFormControlInput1"
+                        value={name}
+                        onChange={e => changeName(e.target.value)}
+                    />
                 </div>
             </div>
             <div className="row  align-self-center">
@@ -24,15 +36,15 @@ const Gender = (props) => {
             </div>
             <div style={rowStyle} className="row  align-self-center">
                 <div className="col-md-6 offset-md-3">
-                    <select className="form-control" id="exampleFormControlSelect1">
-                        <option>Masculino</option>
-                        <option>Feminino</option>
-                    </select>
+                    <input type="text" className="form-control" id="exampleFormControlInput1"
+                        value={gender}
+                        onChange={e => changeGender(e.target.value)}
+                    />
                 </div>
             </div>
             <div style={rowStyle} className="row  align-self-center">
                 <div className="col-sm-7 offset-sm-7">
-                    <Link style={buttonStyle} to="/isjedi/">Continuar</Link>
+                    <Link onClick={clickHander} style={buttonStyle} to="/isjedi/">Continuar</Link>
                 </div>
             </div>
         </div>

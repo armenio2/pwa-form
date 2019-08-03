@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Gender from './components/gender/gender';
@@ -8,16 +8,21 @@ import Result from './components/result/result';
 
 function App() {
 
+  const [dataName, changeDataName] = useState();
+  const [dataGender, changeDataGender] = useState();
   const SignUp = () => {
-    return <Gender title='Cadatrar' />
+    return <Gender title='Cadatrar' changeDataName={changeDataName} changeDataGender={changeDataGender} />
   }
   const ChoiseSide = () => {
-    return <IsJedi title='Lado da Força' />
+    const [side, changeSide] = useState();
+    return <IsJedi title='Lado da Força' side={side} changeSide={changeSide} />
   }
   const ChoiseAvatar = () => {
-    return <Avatar title='Miniatura Personalizada' />
+    const [avatar, changeAvatar] = useState();
+    return <Avatar title='Miniatura Personalizada' avatar={avatar} changeAvatar={changeAvatar} />
   }
   const FinishSignUp = () => {
+    console.log("name ", dataName, dataGender)
     return <Result title='Finish' />
   }
   return (
