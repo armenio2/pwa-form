@@ -3,20 +3,10 @@ import { Link } from "react-router-dom";
 
 import Head from '../head/head';
 
-const Gender = () => {
+const IsJedi = () => {
     return (
         <div style={containerStyle} className="container-fluid">
             <Head title='Registrar' />
-            <div className="row align-self-center">
-                <div className="col-md-6 offset-md-3">
-                    <span>Nome</span>
-                </div>
-            </div>
-            <div style={rowStyle} className="row  align-self-center  ">
-                <div className="col-md-6 offset-md-3">
-                    <input type="email" className="form-control" id="exampleFormControlInput1" />
-                </div>
-            </div>
             <div className="row  align-self-center">
                 <div className="col-md-6 offset-md-3">
                     <span>Gênero</span>
@@ -25,14 +15,14 @@ const Gender = () => {
             <div style={rowStyle} className="row  align-self-center">
                 <div className="col-md-6 offset-md-3">
                     <select className="form-control" id="exampleFormControlSelect1">
-                        <option>Masculino</option>
-                        <option>Feminino</option>
+                        <option>JEDI</option>
+                        <option>SITH</option>
                     </select>
                 </div>
             </div>
             <div style={rowStyle} className="row  align-self-center">
                 <div className="col-sm-7 offset-sm-7">
-                    <Link style={buttonStyle} to="/isjedi/">Continuar</Link>
+                    <Link style={buttonStyle} to="/users/">Continuar</Link>
                 </div>
             </div>
         </div>
@@ -61,4 +51,4 @@ const rowStyle = {
     height: '10vh'
 }
 
-export default Gender;
+export default IsJedi;

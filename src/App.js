@@ -2,13 +2,14 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Gender from './components/gender/gender';
+import IsJedi from './components/isJedi/isJedi';
 
 function Index() {
   return <Gender />;
 }
 
 function About() {
-  return <h2>Tipo</h2>;
+  return <IsJedi />;
 }
 
 function Users() {
@@ -23,7 +24,7 @@ function App() {
 
 
           <Route path="/" exact component={Index} />
-          <Route path="/about/" component={About} />
+          <Route path="/isjedi/" component={About} />
           <Route path="/users/" component={Users} />
         </div>
       </Router>
@@ -32,11 +33,11 @@ function App() {
 }
 
 /*
-      <nav>
-            <Link to="/">Home</Link>
-            <Link to="/about/">About</Link>
-            <Link to="/users/">Users</Link>
-          </nav>
-*/
+    <nav>
+    <Link to="/">Home</Link>
+    <Link to="/about/">About</Link>
+    <Link to="/users/">Users</Link>
+  </nav>
+  */
 
 export default App;
