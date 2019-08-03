@@ -4,14 +4,23 @@ import Select from 'react-select';
 
 import Head from '../head/head';
 
+const options = [
+    { value: 'masc', label: 'Masculino' },
+    { value: 'fem', label: 'Feminino' },
+];
+
 const Gender = (props) => {
 
     const [name, changeName] = useState();
     const [gender, changeGender] = useState();
     const clickHander = () => {
         props.changeDataName(name)
-        props.changeDataGender(gender)
+        props.changeDataGender(gender.value)
     }
+
+    const handleChange = gender => {
+        changeGender(gender)
+    };
 
     return (
         <div style={containerStyle} className="container-fluid">
@@ -36,9 +45,10 @@ const Gender = (props) => {
             </div>
             <div style={rowStyle} className="row  align-self-center">
                 <div className="col-md-6 offset-md-3">
-                    <input type="text" className="form-control" id="exampleFormControlInput1"
+                    <Select
                         value={gender}
-                        onChange={e => changeGender(e.target.value)}
+                        onChange={handleChange}
+                        options={options}
                     />
                 </div>
             </div>
